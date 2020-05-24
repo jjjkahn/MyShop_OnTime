@@ -1,12 +1,7 @@
 ﻿using MyShop.Core.Contracts;
 using MyShop.Core.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyShop.DataAccess.SQL
 {
@@ -32,7 +27,7 @@ namespace MyShop.DataAccess.SQL
         public void Delete(string Id)
         {
             var t = Find(Id);
-            if(context.Entry(t).State == EntityState.Detached)
+            if (context.Entry(t).State == EntityState.Detached)
             {
                 dbset.Attach(t);
             }
