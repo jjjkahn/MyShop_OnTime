@@ -36,7 +36,7 @@
                 <h4>@item.Price</h4>
             </div>
             <div class="col-md-12">
-                <a href="#" class="btn btn-success">Add to cart</a>
+                <a href="@Url.Action("AddToBasket","Basket",new { id = item.Id},null)" class="btn btn-success">Add to cart</a>
             </div>
         </div>
     }
